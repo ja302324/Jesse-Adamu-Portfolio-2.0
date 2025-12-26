@@ -372,6 +372,7 @@
   .work-bg-image {
     object-fit: cover;
     width: 100%;
+    height: 100%;
   }
 
   .category-header,
@@ -392,15 +393,15 @@
   }
 
   .work-card {
-    flex: 0 0 280px;
+    flex: 0 0 500px;
     width: 500px;
-    height: 400px;
+    height: 350px;
   }
 
   .work-card-image {
     position: absolute;
     inset: 0;
-    background-size: contain;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #050505;
@@ -409,7 +410,7 @@
 
   .carousel-track {
     gap: 1.5rem;
-    height: 100px;
+    height: 120px;
   }
 
   .work-card-overlay {
@@ -432,8 +433,8 @@
 
 @media (max-width: 480px) {
   .work-card {
-    flex: 0 0 250px;
-    width: 300px;
+    flex: 0 0 350px;
+    width: 500px;
     height: 400px;
   }
 
