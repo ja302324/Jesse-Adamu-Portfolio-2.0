@@ -1,0 +1,347 @@
+/* ===============================
+   ADD THIS TO THE TOP OF wstyles.css
+   WORK PAGE HEADER OVERRIDE
+   =============================== */
+
+@font-face {
+  font-family: 'Termina Test';
+  src: url('../fonts/TerminaTest-Demi.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-termina: 'Termina Test', sans-serif;
+  --accent: #e6cfa3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+.wbgimage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.15;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, background 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor.hover {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+/* Main Container */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  top: 10rem;
+}
+
+/* Background Grid Pattern */
+.container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Central Title */
+.central-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Floating Boxes Container */
+.boxes-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  height: 90vh;
+  z-index: 2;
+}
+
+/* Floating Box */
+.floating-box {
+  position: absolute;
+  width: 240px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  animation: float 6s ease-in-out infinite;
+  overflow: hidden;
+  box-shadow: 0px 5px 40px var(--accent);
+  transform-origin: center;
+}
+
+.floating-box:hover {
+  transform: scale(1.12) translateY(-12px) !important;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 20px 150px rgba(0, 0, 0, 0);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Position each box */
+.floating-box:nth-child(1) {
+  top: 1%;
+  left: 6%;
+  animation-delay: 0s;
+  animation-duration: 8s;
+}
+
+.floating-box:nth-child(2) {
+  top: -5%;
+  right: 15%;
+  animation-delay: 1s;
+  animation-duration: 7s;
+}
+
+.floating-box:nth-child(3) {
+  bottom: 2%;
+  left: 30%;
+  animation-delay: 2s;
+  animation-duration: 9s;
+}
+
+.floating-box:nth-child(4) {
+  bottom: 8%;
+  right: 5%;
+  animation-delay: 1.5s;
+  animation-duration: 8.5s;
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) translateX(10px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-25px) translateX(-10px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-15px) translateX(5px) rotate(0.5deg);
+  }
+}
+
+/* Box Image */
+.box-image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #111;
+}
+
+.box-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.floating-box:hover .box-image img {
+  transform: scale(1);
+}
+
+/* Box Title */
+.box-title {
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.78) 70%);
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+.floating-box:hover .box-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Background Floating Elements */
+.bg-element {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05), transparent);
+  pointer-events: none;
+  animation: bgFloat 15s ease-in-out infinite;
+}
+
+.bg-element:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: -100px;
+  animation-duration: 20s;
+}
+
+.bg-element:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  right: -50px;
+  animation-duration: 18s;
+  animation-delay: 2s;
+}
+
+@keyframes bgFloat {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, 30px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .boxes-container {
+    height: 100vh;
+  }
+
+  .floating-box {
+    width: 240px;
+    padding: 1.25rem;
+  }
+
+  .central-title {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+
+  .boxes-container {
+    position: relative;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .floating-box {
+    position: relative !important;
+    width: 100%;
+    animation: none !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    padding: 1.25rem;
+  }
+
+  .central-title {
+    font-size: 4rem;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .box-title {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0.75rem;
+    background: transparent;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .boxes-container {
+    grid-template-columns: 1fr;
+  }
+
+  .central-title {
+    font-size: 3rem;
+  }
+}

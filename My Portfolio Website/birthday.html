@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Designs — Personal</title>
+  <link rel="stylesheet" href="css/cursor.css">
+  <link rel="stylesheet" href="css/personal-design/Birtday Design/birthday.css">
+  <script src="Js/birthday.js" defer></script>
+</head>
+<body>
+  <img src="Images/Purplespace.jpeg" class="wbgimage" alt="Background texture">
+  <div class="confetti confetti-1"></div>
+  <div class="confetti confetti-2"></div>
+
+  <a href="personal.html" class="back-button">← Back</a>
+
+  <section class="header-section">
+    <div class="header-content">
+      <div class="logo-container">
+        <div class="rotating-circle"></div>
+        <div class="logo-inner">
+          <img src="Images/Signature.png" alt="Jesse Adamu Logo">
+        </div>
+      </div>
+      <h1 class="header-title">Birthday Graphics</h1>
+      <p class="header-subtitle">Colorful celebrations & heartfelt tributes</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="masonry" id="birthdayGrid">
+      <div class="card tall" onclick="openLightbox(0)">
+        <img src="Images/Personal Page/Birthday Design/Charity Ketu.jpg" alt="Charity Ketu birthday design">
+        <div class="card-info">
+          <p class="tag">Purple Bloom</p>
+          <h3>Charity Ketu</h3> 
+          <span class="meta">Happy Birthday · November 21st</span>
+        </div>
+      </div>
+
+      <div class="card" onclick="openLightbox(1)">
+        <img src="Images/Personal Page/Birthday Design/Sammy Adinike.jpg" alt="Sammy Adenike birthday design">
+        <div class="card-info">
+          <p class="tag">Rose Glow</p>
+          <h3>Sammy Adenike</h3>
+          <span class="meta">+1 Celebration</span>
+        </div>
+      </div>
+
+      <div class="card wide" onclick="openLightbox(2)">
+        <img src="Images/Personal Page/Birthday Design/Kemi Ade.jpg" alt="Kemi Adesinloro birthday design">
+        <div class="card-info">
+          <p class="tag">Magenta Spotlight</p>
+          <h3>Kemi Adesinloro</h3>
+          <span class="meta">Birthday Edit</span>
+        </div>
+      </div>
+
+      <div class="card" onclick="openLightbox(3)">
+        <img src="Images/Personal Page/Birthday Design/HOD blue.jpg" alt="Olalekan Jones birthday design blue">
+        <div class="card-info">
+          <p class="tag">Cool Tribute</p>
+          <h3>Olalekan Jones</h3>
+          <span class="meta">Head of PR · Koinonia</span>
+        </div>
+      </div>
+
+      <div class="card" onclick="openLightbox(4)">
+        <img src="Images/Personal Page/Birthday Design/HOD green.jpg" alt="Olalekan Jones birthday design green">
+        <div class="card-info">
+          <p class="tag">Mint Glow</p>
+          <h3>Olalekan Jones</h3>
+          <span class="meta">Head of PR · Koinonia</span>
+        </div>
+      </div>
+
+      <div class="card" onclick="openLightbox(5)">
+        <img src="Images/Personal Page/Birthday Design/HOD grey.jpg" alt="Olalekan Jones birthday design gray">
+        <div class="card-info">
+          <p class="tag">Monochrome Shine</p>
+          <h3>Olalekan Jones</h3>
+          <span class="meta">Head of PR · Koinonia</span>
+        </div>
+      </div>
+
+      <div class="card" onclick="openLightbox(6)">
+        <img src="Images/Personal Page/Birthday Design/HOD gold.jpg" alt="Olalekan Jones birthday design gold">
+        <div class="card-info">
+          <p class="tag">Gold Toast</p>
+          <h3>Olalekan Jones</h3>
+          <span class="meta">Head of PR · Koinonia</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <div class="lightbox-close" onclick="closeLightbox()">×</div>
+      <img id="lightboxImage" src="" alt="Birthday design preview">
+      <div class="lightbox-nav prev" onclick="navigateLightbox(-1)">‹</div>
+      <div class="lightbox-nav next" onclick="navigateLightbox(1)">›</div>
+    </div>
+  </div>
+</body>
+</html>

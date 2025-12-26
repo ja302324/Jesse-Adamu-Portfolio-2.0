@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesse Adamu — Creative Portfolio - Gameday Design</title>
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/Sports-design/Gameday-design/gheader-hero.css">
+    <link rel="stylesheet" href="css/Sports-design/Gameday-design/gameday.css">
+    <script src="Js/gameday.js" defer></script>
+</head>
+<body>
+  <img src="Images/Sports Design/Gameday Design/QUARTER FINAL DESIGN GAMEDAY.jpg" class="wbgimage" alt="Gameday backdrop graphic">
+  <!-- Back Button -->
+  <a href="sports.html" class="back-button">← Back</a>
+
+  <!-- Header Section -->
+  <section class="header-section">
+    <div class="header-content">
+      <div class="logo-container">
+        <div class="rotating-circle"></div>
+        <div class="logo-inner">
+          <img src="Images/Signature.png" alt="">
+        </div>
+      </div>
+      <h1 class="header-title">GAMEDAY DESIGN</h1>
+      <p class="header-subtitle">Tipoff visuals and hype drops</p>
+    </div>
+  </section>
+  <!-- Marquee Matchups Section -->
+  <div class="section-header">
+    <h2>MATCH NIGHT</h2>
+    <p class="section-subheader">Countdowns • Matchups • Energy</p>
+  </div>
+
+  <!-- Matchup Carousel -->
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <div class="carousel-track" id="matchupCarousel">
+        <div class="carousel-item" data-index="0">
+          <img src="Images/Sports Design/Gameday Design/GAMEDAY 2 - NIGERIA VS CANADA.jpg" alt="Matchup spotlight 1">
+        </div>
+        <div class="carousel-item" data-index="1">
+          <img src="Images/Sports Design/Gameday Design/GAMEDAY 1 DESIGN.jpg" alt="Countdown graphic">
+        </div>
+        <div class="carousel-item" data-index="2">
+          <img src="Images/Sports Design/Gameday Design/Game Quarter Finals.jpg" alt="Tipoff poster">
+        </div>
+        <div class="carousel-item" data-index="3">
+          <img src="Images/Sports Design/Gameday Design/GAMEDAY - SELECTION 9-12.jpg" alt="Finals matchup">
+        </div>
+      </div>
+      <div class="carousel-nav prev" onclick="moveCarousel('matchupCarousel', -1)">‹</div>
+      <div class="carousel-nav next" onclick="moveCarousel('matchupCarousel', 1)">›</div>
+    </div>
+  </section>
+
+  <!-- Hero Posters Grid -->
+  <div class="grid-section">
+    <div class="grid-container" id="featureGrid">
+      <div class="grid-item large" onclick="openLightbox(0)">
+        <img src="Images/Sports Design/Gameday Design/FINAL GAMEDAY DESIGN.jpg" alt="Marquee poster">
+      </div>
+      <div class="grid-item large" onclick="openLightbox(1)">
+        <img src="Images/Sports Design/Gameday Design/GAME 2 MVP.jpg" alt="Player spotlight poster">
+      </div>
+      <div class="grid-item large" onclick="openLightbox(2)">
+        <img src="Images/Sports Design/Gameday Design/Game Starters.jpg" alt="Lineup reveal poster">
+      </div>
+      <div class="grid-item large" onclick="openLightbox(3)">
+        <img src="Images/Sports Design/Gameday Design/QUARTER FINAL DESIGN GAMEDAY.jpg" alt="Wide matchup graphic">
+      </div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <h2>ARENA DROP</h2>
+    <p class="section-subheader">Starting five • Halftime • Fan moments</p>
+  </div>
+
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <div class="carousel-track" id="socialCarousel">
+        <div class="carousel-item" data-index="0">
+          <img src="Images/Sports Design/Gameday Design/FULL TIME GAME 1.jpg" alt="Starting five graphic">
+        </div>
+        <div class="carousel-item" data-index="1">
+          <img src="Images/Sports Design/Gameday Design/Game 1 Score.jpg" alt="Tipoff hype graphic">
+        </div>
+        <div class="carousel-item" data-index="2">
+          <img src="Images/Sports Design/Gameday Design/GAMEDAY - SELECTION 9-16.jpg" alt="Tunnel arrival graphic">
+        </div>
+        <div class="carousel-item" data-index="3">
+          <img src="Images/Sports Design/Gameday Design/GAMEDAY Semi-Finals.jpg" alt="Post-game final score">
+        </div>
+        <div class="carousel-item" data-index="4">
+          <img src="Images/Sports Design/Gameday Design/GAMEDAY 1 || NIGERIA VS CHINA.jpg" alt="Post-game final score">
+        </div>
+        <div class="carousel-item" data-index="5">
+          <img src="Images/Sports Design/Gameday Design/Gameday Day 2.jpg" alt="Post-game final score">
+        </div>
+      </div>
+      <div class="carousel-nav prev" onclick="moveCarousel('socialCarousel', -1)">‹</div>
+      <div class="carousel-nav next" onclick="moveCarousel('socialCarousel', 1)">›</div>
+    </div>
+  </section>
+
+  <div class="grid-section">
+    <div class="grid-container" id="featureGridBottom">
+      <div class="grid-item large" onclick="openLightbox(4)">
+        <img src="Images/Sports Design/Gameday Design//GAMEDAY 3 - NIGERIA VS PORTUGAL.jpg" alt="Alternate poster concept">
+      </div>
+      <div class="grid-item large" onclick="openLightbox(5)">
+        <img src="Images/Sports Design/Gameday Design/Game 2 Score.jpg" alt="Bench energy graphic">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <div class="lightbox-close" onclick="closeLightbox()">×</div>
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-nav prev" onclick="navigateLightbox(-1)">‹</div>
+      <div class="lightbox-nav next" onclick="navigateLightbox(1)">›</div>
+    </div>
+  </div>
+
+</body>
+</html>

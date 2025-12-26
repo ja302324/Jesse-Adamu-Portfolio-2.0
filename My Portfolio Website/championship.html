@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesse Adamu — Creative Portfolio - Championship Art</title>
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/Sports-design/Championship-design/cheader-hero.css">
+    <link rel="stylesheet" href="css/Sports-design/Championship-design/championship.css">
+    <script src="Js/championship.js" defer></script>
+</head>
+<body>
+  <img src="Images/Sports Design/Championship Design/THANK YOU AFA DESIGN.jpg" class="wbgimage" alt="Championship backdrop graphic">
+  <!-- Back Button -->
+  <a href="sports.html" class="back-button">← Back</a>
+
+  <!-- Header Section -->
+  <section class="header-section">
+    <div class="header-content">
+      <div class="logo-container">
+        <div class="rotating-circle"></div>
+        <div class="logo-inner">
+          <img src="Images/Signature.png" alt="">
+        </div>
+      </div>
+      <h1 class="header-title">CHAMPIONSHIP ART</h1>
+      <p class="header-subtitle">Victory visuals, parades, confetti</p>
+    </div>
+  </section>
+  
+  <div class="section-header">
+    <h2>FINAL WHISTLE</h2>
+    <p class="section-subheader">Trophy lifts • MVP moments • Citywide energy</p>
+  </div>
+
+
+  <!-- Hero Posters Grid -->
+  <div class="grid-section">
+    <div class="grid-container" id="featureGrid">
+      <div class="grid-item large" onclick="openLightbox(0)">
+        <img src="Images/Sports Design/Championship Design/CHAMPIONS DESIGN PAGE 1.jpg" alt="Women afrobasket Champions">
+      </div>
+      <div class="grid-item large" onclick="openLightbox(1)">
+        <img src="Images/Sports Design/Championship Design/CHAMPIONS DESIGN PAGE 2.jpg" alt="4 in a row">
+      </div>
+      <div class="grid-item wide" onclick="openLightbox(2)">
+        <img src="Images/Sports Design/Championship Design/THANK YOU AFA DESIGN.jpg" alt="Victory parade graphic">
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <div class="lightbox-close" onclick="closeLightbox()">×</div>
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-nav prev" onclick="navigateLightbox(-1)">‹</div>
+      <div class="lightbox-nav next" onclick="navigateLightbox(1)">›</div>
+    </div>
+  </div>
+
+</body>
+</html>

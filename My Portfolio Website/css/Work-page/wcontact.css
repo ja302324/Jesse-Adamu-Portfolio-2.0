@@ -1,0 +1,486 @@
+/* Trigger button - REPOSITIONED FOR ABOUT SECTION */
+.open-contact-card {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  right: 0;
+  border: 2px solid white;
+  background: rgba(255,255,255,.08);
+  color: white;
+  font-family: var(--font-display, system-ui);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden; 
+  z-index: 2;
+}
+
+@media (max-width: 1400px) {
+    .open-contact-card {
+        margin: 0 auto;
+        position: relative;
+        right: 1rem;
+    }
+}
+
+@media (max-width: 1040px) {
+    .open-contact-card {
+        margin: 0 auto;
+        position: relative;
+        right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .open-contact-card {
+        padding: 10px;
+        font-size: 15px;
+        right: 0;
+    }
+}
+
+.open-contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.open-contact-card:hover {
+  color: var(--accent, #e6cfa3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(230, 207, 163, 0.3);
+}
+
+.open-contact-card:hover::before {
+  transform: translateX(0);
+}
+
+/* Modal shell */
+.contact-card-modal[aria-hidden="true"] { 
+  display: none; 
+}
+
+.contact-card-modal[aria-hidden="false"] { 
+  position: fixed; 
+  inset: 0; 
+  z-index: 99999; 
+  display: grid; 
+  place-items: center;
+}
+
+/* Dim/blurred backdrop */
+.contact-card-backdrop {
+  position: absolute; 
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,.65), rgba(0,0,0,.85));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 3;
+}
+
+/* Glass card - FIXED LAYOUT */
+.contact-card-panel {
+  position: relative;
+  z-index: 5;
+  width: min(92vw, 650px);
+  min-height: 350px;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 30px 80px rgba(0,0,0,.55);
+  backdrop-filter: blur(18px) saturate(180%) contrast(110%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%) contrast(110%);
+  transform: translateY(10px) scale(.60);
+  opacity: 0;
+  animation: cardIn .35s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+@keyframes cardIn {
+  to { 
+    transform: translateY(0) scale(1); 
+    opacity: 1; 
+  }
+}
+
+/* Close button */
+.contact-card-close {
+  position: absolute; 
+  top: 1rem; 
+  right: 1rem;
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.08);
+  color: #fff; 
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card-close:hover { 
+  background: rgba(255,255,255,.14); 
+  transform: rotate(90deg);
+}
+
+/* Header - FIXED STRUCTURE */
+.contact-card-header {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50px;
+}
+
+.contact-card-avatar {
+  width: 120px; 
+  height: auto; 
+  object-fit: contain;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.35));
+  align-self: flex-start;
+  margin-left: 2.5rem;
+}
+
+.contact-card-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-left: 22rem;
+}
+
+.contact-card-name {
+  font-family: var(--font-display, system-ui);
+  font-size: 2rem;
+  margin: 0;
+  color: var(--accent, #e6cfa3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.contact-card-tagline {
+  margin: 0; 
+  color: var(--muted, #bdbdbd); 
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+/* Contact Links - FIXED POSITIONING */
+.contact-card-links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc(100% - 4rem);
+  max-width: 550px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 16px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px) saturate(160%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.contact-card img {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 8px;
+  filter: none;
+  opacity: 1;
+}
+
+.contact-card h3 {
+  font-family: var(--font-display, system-ui);
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Platform brand colors */
+.contact-card.linkedin { 
+  color: #0077b5; 
+}
+
+.contact-card.github { 
+  color: #c9d1d9; 
+}
+
+.contact-card.instagram { 
+  color: #e4405f; 
+}
+
+.contact-card.email { 
+  color: #d44638; 
+}
+
+/* Hover effects with brand colors */
+.contact-card.linkedin:hover { 
+  background: rgba(0, 119, 181, 0.15); 
+  border-color: #0077b5;
+}
+
+.contact-card.github:hover { 
+  background: rgba(201, 209, 217, 0.15); 
+  border-color: #c9d1d9;
+}
+
+.contact-card.instagram:hover { 
+  background: rgba(228, 64, 95, 0.15); 
+  border-color: #e4405f;
+}
+
+.contact-card.email:hover { 
+  background: rgba(212, 70, 56, 0.15); 
+  border-color: #d44638;
+}
+
+/* Optional QR block */
+.contact-card-qr { 
+  margin-top: .75rem; 
+  display: grid; 
+  place-items: center; 
+}
+
+.contact-card-qr img { 
+  width: 120px; 
+  height: 120px; 
+  opacity: .95; 
+}
+
+/* Motion safety */
+@media (prefers-reduced-motion: reduce) {
+  .contact-card-panel { 
+    animation: none; 
+    opacity: 1; 
+    transform: none; 
+  }
+  .open-contact-card, 
+  .contact-card { 
+    transition: none; 
+  }
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+   =============================== */
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  .contact-card-panel {
+    padding: 2rem 1.5rem;
+    min-height: 300px;
+    width: 95vw;
+  }
+
+  .contact-card-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-card-titles {
+    width: 150px;
+    top: 14px;
+    right: -45px;
+  }
+
+  .contact-card-name {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .contact-card-tagline {
+    font-size: 0.4rem;
+  }
+
+  .contact-card-avatar {
+    width: 100px;
+  }
+
+  .contact-card-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+
+  .contact-card {
+    height: 90px;
+    width: 90px;
+    padding: 0.8rem;
+  }
+
+  .contact-card img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .open-contact-card {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
+  .contact-card-panel {
+    padding: 1.5rem 1rem;
+    min-height: auto;
+    border-radius: 16px;
+  }
+
+  .contact-card-header {
+    margin-bottom: 1.5rem;
+    padding-right: 2rem;
+  }
+
+  .contact-card-avatar {
+    width: 50px;
+  }
+
+  .contact-card-name {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .contact-card-tagline {
+    font-size: 0.8rem;
+  }
+
+  .contact-card-close {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+
+  .contact-card-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .contact-card {
+    min-height: 85px;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .contact-card img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 6px;
+  }
+
+  .contact-card h3 {
+    font-size: 0.7rem;
+  }
+
+  .contact-card-qr {
+    margin-top: 1rem;
+  }
+
+  .contact-card-qr img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  .contact-card-panel {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .contact-card-links {
+    gap: 0.6rem;
+  }
+
+  .contact-card {
+    min-height: 75px;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .contact-card img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-card h3 {
+    font-size: 0.65rem;
+  }
+}
+
+/* Motion safety */
+@media (prefers-reduced-motion: reduce) {
+  .contact-card-panel { 
+    animation: none; 
+    opacity: 1; 
+    transform: none; 
+  }
+  .open-contact-card, 
+  .contact-card { 
+    transition: none; 
+  }
+}
+
+/* Button responsive adjustments */
+@media (max-width: 1400px) {
+  .open-contact-card {
+    margin: 0 auto;
+    position: relative;
+    right: 1rem;
+  }
+}
+
+@media (max-width: 1040px) {
+  .open-contact-card {
+    margin: 0 auto;
+    position: relative;
+    right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .open-contact-card {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.8rem;
+    right: 0;
+    width: auto;
+    max-width: 250px;
+  }
+}

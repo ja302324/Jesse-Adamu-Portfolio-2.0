@@ -1,0 +1,233 @@
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, background 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor.hover {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+/* ===============================
+   ABOUT SECTION - FULLY RESPONSIVE FIX
+   =============================== */
+
+.about-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  height: 120vh;
+  z-index: 1;
+  background: transparent;
+  padding: 6rem 2rem;
+  box-sizing: border-box;
+  overflow: visible;
+  margin-top: 50px;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(10, 10, 10, 0.55), rgba(0, 0, 0, 0.85));
+  z-index: -1;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 10px;
+}
+
+.about-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin: 0;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 25px rgba(230, 207, 163, 0.6);
+  text-align: center;
+  width: 100%;
+}
+
+.about-text-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 2.5rem;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-text {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.8;
+  color: #f0f0f0;
+  font-family: var(--font-sans);
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Button - Centered */
+.open-contact-card {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  border: 2px solid var(--accent, #e6cfa3);
+  background: rgba(255,255,255,.08);
+  color: var(--accent, #e6cfa3);
+  font-family: var(--font-display, system-ui);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.open-contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent, #e6cfa3);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.open-contact-card:hover {
+  color: black;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(230, 207, 163, 0.3);
+
+}
+
+.open-contact-card:hover::before {
+  transform: translateX(0);
+}
+
+.about-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
+  background-image: url('../Images/Aboutmebg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===============================
+   RESPONSIVE BREAKPOINTS
+   =============================== */
+
+@media (max-width: 1200px) {
+  .about-section {
+    padding: 5rem 2rem;
+  }
+
+  .about-content {
+    left: 10px;
+    bottom: 80px;
+  }
+
+  .about-text-container {
+    padding: 2rem;
+  }
+
+  .about-image {
+    opacity: 0.75;
+    right: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-text-container {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .open-contact-card {
+    padding: 0.9rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .about-image {
+    right: 1rem;
+  }
+
+  .about-text-container {
+    padding: 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .about-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .open-contact-card {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jesse Adamu — Creative Portfolio</title>
+
+  <link rel="stylesheet" href="css/cursor.css">
+  <link rel="stylesheet" href="css/header-hero.css">
+  <link rel="stylesheet" href="css/about-me.css">
+  <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/contact.css">
+
+    <!-- GSAP Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+
+  <script src="Js/script.js" defer></script>
+
+</head>
+<body>
+  <img src="Images/Purplespace.jpeg" class="bg-image" alt="">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav">
+      <!-- Hamburger Menu (Left) -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="hamburger-label">MENU</div>
+      </div>
+
+      <!-- Centered Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/Signature.png" alt="Jesse Adamu Signature Logo" class="signature-logo">
+        </a>
+      </div>
+
+      <!-- Cinematic Overlay Navigation -->
+       
+      <div class="nav-overlay" aria-hidden="true">
+        <ul class="nav-menu">
+          <div id="nav-item-container1">
+            <li><a href="index.html">Home</a></li>
+          </div>
+          <div id="nav-item-container2">
+            <li><a href="#about">About</a></li>
+          </div>
+          <div id="nav-item-container3">
+            <li><a href="work.html">Work</a></li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="hero-section">
+    <div class="stage">
+      <div class="container">
+        <div class="ring">
+          <div class="img" style="--i:0; background-image: url('Images/Hero Section/Re-opening.jpg');"></div>
+          <div class="img" style="--i:1; background-image: url('Images/Hero Section/Promise Canvas.jpg');"></div>
+          <div class="img" style="--i:2; background-image: url('Images/Hero Section/Artboard 4.jpg');"></div>
+          <div class="img" style="--i:3; background-image: url('Images/Hero Section/JOSH IS BACK.jpg');"></div>
+          <div class="img" style="--i:4; background-image: url('Images/Hero Section/Artboard 1.jpg');"></div>
+          <div class="img" style="--i:5; background-image: url('Images/Hero Section/T-Shirt Mockup_.jpg');"></div>
+          <div class="img" style="--i:6; background-image: url('Images/Hero Section/Lets Talk - Light.jpeg');"></div>
+          <div class="img" style="--i:7; background-image: url('Images/Hero Section/Breakfast.png');"></div>
+        </div>
+      </div>
+      <img src="Images/Hero Section/Hero Image.png" class="hero-bg" alt="">
+      <div id="overlay"></div>
+    </div>
+  </section>
+  
+  <!-- ABOUT ME SECTION -->
+  <section id="about" class="about-section">
+    <div class="about-overlay"></div>
+    <div class="about-content">
+      <h2 class="about-title">About Me</h2>
+      <div class="about-text-container">
+        <p class="about-text">
+          I’m Jesse Adamu, a designer, storyteller, and strategic builder using visual creativity to help brands communicate with clarity and soul. 
+          With roots in Nigeria, shaped by global experience, and grounded in faith, I specialize in brand identity, web design, and digital strategy for small businesses, nonprofits, and purpose-driven projects. 
+          I co-founded Saved By Design, where I craft WordPress websites and cohesive branding systems that reflect each client’s unique mission. 
+          Whether I’m designing a logo, building a custom site, or mapping a full brand journey, I lead with intention, cultural insight, and a deep belief in excellence. 
+          My work blends clean design with strategic thinking, always aiming to create visuals that not only look good, but speak powerfully. Design is how I serve.
+        </p>
+
+      </div>
+      <!-- Contact trigger (you can also put this in your header or footer) -->
+      <button class="open-contact-card" aria-haspopup="dialog" aria-controls="contactCard"> Get in Touch </button>
+
+    </div>
+    <img src="Images/Aboutmebg.jpg" alt="Jesse Adamu Portrait" class="about-image">
+  </section>
+
+
+  <!-- WORK SECTION -->
+  <section id="work" class="work-section">
+    <div class="work-container">
+      <h2 class="work-main-title">Selected Work</h2>
+      <p class="work-subtitle">A showcase of creativity across web, brand, sports, and personal design</p>
+
+      <!-- WEB DESIGN CATEGORY -->
+      <div class="work-category1">
+        <div class="work-carousel web-carousel">
+          <div class="carousel-track">
+            <!-- Website 1: Tasty Fingers -->
+            <a href="https://tastyfingersrestaurant.com/" target="_blank" rel="noopener noreferrer" class="work-card web-card">
+              <div class="work-card-image" style="background-image: url('Images/Work-Section/WebDesign/Project1.png');"></div>
+              <div class="work-card-overlay">
+                <h4 class="work-card-title">Tasty Fingers Restaurant</h4>
+                <p class="work-card-description">Restaurant Website</p>
+                <span class="external-link-icon">↗</span>
+              </div>
+            </a>
+
+            <!-- Website 2: Koinonia -->
+            <a href="https://koinoniageneralassembly.com/" target="_blank" rel="noopener noreferrer" class="work-card web-card">
+              <div class="work-card-image" style="background-image: url('Images/Work-Section/WebDesign/Project2.png');"></div>
+              <div class="work-card-overlay">  
+                <h4 class="work-card-title">Koinonia General Assembly</h4>
+                <p class="work-card-description">Church Website</p>
+                <span class="external-link-icon">↗</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="category-header1">
+          <h3 class="category-title">Web Design</h3>
+          <span class="category-count">2 Projects</span>
+        </div>
+      </div>
+
+      <!-- BRAND DESIGN CATEGORY -->
+      <div class="work-category2">
+        <div class="work-carousel brand-carousel">
+          <div class="carousel-track">
+            <a href="tastyf.html" class="work-card brand-card">
+              <div class="work-card-image" style="background-image: url('Images/Work-Section/BrandDesign/Logo1.png');"></div>
+              <div class="work-card-overlay">
+                <h4 class="work-card-title">Brand Identity 1</h4>
+                <p class="work-card-description">Logo Design</p>
+              </div>
+            </a>
+
+            <a href="nextgen.html" class="work-card brand-card">
+              <div class="work-card-image" style="background-image: url('Images/Work-Section/BrandDesign/logo2.jpg');"></div>
+              <div class="work-card-overlay">
+                <h4 class="work-card-title">Brand Identity 2</h4>
+                <p class="work-card-description">Logo Design</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="category-header">
+          <h3 class="category-title">Brand Design</h3>
+          <span class="category-count">2 Brands</span>
+        </div>
+        <a href="brand-design.html" class="view-more-btn">View All Brand Work →</a>
+      </div>
+
+      <!-- SPORTS GRAPHICS CATEGORY -->
+      <div class="work-category3">
+        <div class="work-carousel sports-carousel">
+          <div class="carousel-track">
+            <a href="pfeature.html" class="work-card sports-card">
+              <div class="work-card-image" style="background-image: url('Images/Work-Section/Sports/Poster1.jpg');"></div>
+              <div class="work-card-overlay">
+                <h4 class="work-card-title">Player Feature</h4>
+                <p class="work-card-description">Sports Poster</p>
+              </div>
+            </a>
+
+            <a href="tgraphics.html" class="work-card sports-card">
+              <div class="work-card-image" style="background-image: url('Images/Work-Section/Sports/Poster2.jpg');"></div>
+              <div class="work-card-overlay">
+                <h4 class="work-card-title">Team Graphics</h4>
+                <p class="work-card-description">Sports Design</p>
+              </div>
+            </a>
+
+            <a href="gameday.html" class="work-card sports-card">
+              <div class="work-card-image" style="background-image: url('Images/Work-Section/Sports/Poster3.jpg');"></div>
+              <div class="work-card-overlay">
+                <h4 class="work-card-title">Gameday Design</h4>
+                <p class="work-card-description">Sports Graphics</p>
+              </div>
+            </a>
+
+            <a href="championship.html" class="work-card sports-card">
+              <div class="work-card-image" style="background-image: url('Images/Work-Section/Sports/Poster4.jpg');"></div>
+              <div class="work-card-overlay">
+                <h4 class="work-card-title">Championship Art</h4>
+                <p class="work-card-description">Sports Media</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="category-header">
+          <h3 class="category-title">Sports Graphics</h3>
+          <span class="category-count">4 Categories</span>
+        </div>
+        <a href="sports.html" class="view-more-btn">View All Sports Work →</a>
+      </div>
+
+      <!-- PERSONAL DESIGN CATEGORY -->
+      <div class="work-category4">
+        <div class="work-carousel personal-carousel">
+          <div class="carousel-track">
+            <a href="potrait-art.html" class="work-card personal-card">
+              <div class="work-card-image" style="background-image: url('Images/Work-Section/Personal/Potrait1.jpg');"></div>
+              <div class="work-card-overlay">
+                <h4 class="work-card-title">Portrait Art</h4>
+                <p class="work-card-description">Custom Design</p>
+              </div>
+            </a>
+
+            <a href="birthday.html" class="work-card personal-card">
+              <div class="work-card-image" style="background-image: url('Images/Work-Section/Personal/Potrait2.jpg');"></div>
+              <div class="work-card-overlay">
+                <h4 class="work-card-title">Birthday Graphics</h4>
+                <p class="work-card-description">Celebration Design</p>
+              </div>
+            </a>
+
+            <a href="event.html" class="work-card personal-card">
+              <div class="work-card-image" style="background-image: url('Images/Work-Section/Personal/Potrait3.jpg');"></div>
+              <div class="work-card-overlay">
+                <h4 class="work-card-title">Event Poster</h4>
+                <p class="work-card-description">Personal Project</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="category-header">
+          <h3 class="category-title">Personal Design</h3>
+          <span class="category-count">3 Categories</span>
+        </div>
+        <a href="personal.html" class="view-more-btn">View All Personal Work →</a>
+      </div>
+
+    </div>
+    <img src="Images/Work-Section/Workbg.png" class="work-bg-image" alt="">
+  </section>
+
+  <!-- Glassy Business Card Modal -->
+  <div class="contact-card-modal" id="contactCard" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="contact-card-backdrop" data-close></div>
+
+      <div class="contact-card-panel" role="document" tabindex="-1" id="contact-panel">
+        <button class="contact-card-close" aria-label="Close" data-close>×</button>
+
+        <div class="contact-card-header">
+          <img src="Images/Signature.png" alt="Jesse Adamu" class="contact-card-avatar">
+          <div class="contact-card-titles">
+            <h3 class="contact-card-name">Jesse Adamu</h3>
+            <p class="contact-card-tagline">Designer • Motion • Web</p>
+          </div>
+        </div>
+
+        <div class="contact-card-links">
+          <a href="https://www.linkedin.com/in/jesseadamu2/" target="_blank" class="contact-card linkedin">
+            <img src="Images/social media Icons/linkedin.png" alt="LinkedIn Icon">
+            <h3>LinkedIn</h3>
+          </a>
+          <a href="https://github.com/ja302324" target="_blank" class="contact-card github">
+            <img src="Images/social media Icons/social.png" alt="GitHub Icon">
+            <h3>GitHub</h3>
+          </a>
+          <a href="https://www.instagram.com/jesse.adamu/" target="_blank" class="contact-card instagram">
+            <img src="Images/social media Icons/instagram.png" alt="Instagram Icon">
+            <h3>Instagram</h3>
+          </a>
+          <a href="mailto:jesseadamu2021@gmail.com" class="contact-card email">
+            <img src="Images/social media Icons/communication.png" alt="Email Icon">
+            <h3>Email Me</h3>
+          </a>
+        </div>
+        <div class="contact-card-qr">
+            <!-- Optional: drop a static QR image that links to your Linktree or site -->
+            <!-- <img src="Images/qr-contact.png" alt="Scan to connect"> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ 
+</html>

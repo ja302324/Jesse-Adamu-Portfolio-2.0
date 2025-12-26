@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesse Adamu — Creative Portfolio - Player Feature</title>
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/Sports-design/player-feature/pfeature.css">
+    <link rel="stylesheet" href="css/Sports-design/player-feature/pfheader-hero.css">
+    <script src="Js/pfeature.js" defer></script>
+</head>
+<body>
+  <img src="Images/MuchaTseBle.jpeg" class="wbgimage" alt="">
+    <!-- Back Button -->
+  <a href="sports.html" class="back-button">← Back</a>
+
+  <!-- Header Section -->
+  <section class="header-section">
+    <div class="header-content">
+      <div class="logo-container">
+        <div class="rotating-circle"></div>
+        <div class="logo-inner">
+          <img src="Images/Signature.png" alt="">
+        </div>
+      </div>
+      <h1 class="header-title">PLAYER FEATURE</h1>
+      <p class="header-subtitle">Pro & College Athletes</p>
+    </div>
+  </section>
+
+  <!-- Professional Athletes Section -->
+  <div class="section-header">
+    <h2>PROFESSIONAL ATHLETES</h2>
+    <p class="section-subheader">Elite Player Features</p>
+  </div>
+
+  <!-- Pro Carousel -->
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <div class="carousel-track" id="proCarousel">
+        <!-- Add your pro athlete images here -->
+        <div class="carousel-item" data-index="0">
+          <img src="Images/Sports Design/Player-feature/Professional Athletes/Balogun Canvas.jpg" alt="Pro Player 1">
+        </div>
+        <div class="carousel-item" data-index="1">
+          <img src="Images/Sports Design/Player-feature/Professional Athletes/Musa Design.jpg" alt="Pro Player 2">
+        </div>
+        <div class="carousel-item" data-index="2">
+          <img src="Images/Sports Design/Player-feature/Professional Athletes/Nicole Canvas.jpg" alt="Pro Player 3">
+        </div>
+        <div class="carousel-item" data-index="3">
+          <img src="Images/Sports Design/Player-feature/Professional Athletes/Happy Birthday Amy (Dallas Wings).jpg" alt="Pro Player 4">
+        </div>
+        <div class="carousel-item" data-index="4">
+          <img src="Images/Sports Design/Player-feature/Professional Athletes/Promise Canvas.jpg" alt="Pro Player 5">
+        </div>
+      </div>
+      <div class="carousel-nav prev" onclick="moveCarousel('proCarousel', -1)">‹</div>
+      <div class="carousel-nav next" onclick="moveCarousel('proCarousel', 1)">›</div>
+    </div>
+  </section>
+
+  <!-- Pro Grid -->
+  <div class="grid-section">
+    <div class="grid-container" id="proGrid">
+      <div class="grid-item large" onclick="openLightbox(0)">
+        <img src="Images/Sports Design/Player-feature/Professional Athletes/Happy Birthday Amy (Dallas Wings).jpg" alt="Pro Design 1">
+      </div>
+      <div class="grid-item large" onclick="openLightbox(1)">
+        <img src="Images/Sports Design/Player-feature/Professional Athletes/JOSH IS BACK.jpg" alt="Pro Design 2">
+      </div>
+      <div class="grid-item" onclick="openLightbox(2)">
+        <img src="Images/Sports Design/Player-feature/Professional Athletes/Point God Design.jpg" alt="Pro Design 3">
+      </div>
+      <div class="grid-item" onclick="openLightbox(3)">
+        <img src="Images/Sports Design/Player-feature/Professional Athletes/Musa Design.jpg" alt="Pro Design 4">
+      </div>
+      <div class="grid-item" onclick="openLightbox(4)">
+        <img src="Images/Sports Design/Player-feature/Professional Athletes/Balogun Design.jpg" alt="Pro Design 5">
+      </div>
+      <div class="grid-item" onclick="openLightbox(5)">
+        <img src="Images/Sports Design/Player-feature/Professional Athletes/Amy Design.jpg" alt="Pro Design 6">
+      </div>
+            <div class="grid-item" onclick="openLightbox(6)">
+        <img src="Images/Sports Design/Player-feature/Professional Athletes/Nicole Post.jpg" alt="Pro Design 7">
+      </div>
+    </div>
+  </div>
+
+  <!-- College Athletes Section -->
+  <div class="section-header">
+    <h2>COLLEGE ATHLETES</h2>
+    <p class="section-subheader">Reactionary Pieces</p>
+  </div>
+
+  <!-- College Carousel -->
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <div class="carousel-track" id="collegeCarousel">
+        <div class="carousel-item" data-index="0">
+          <img src="Images/Sports Design/Player-feature/College Athletes/Artboard 1.jpg" alt="College Player 1">
+        </div>
+        <div class="carousel-item" data-index="1">
+          <img src="Images/Sports Design/Player-feature/College Athletes/Artboard 2.jpg" alt="College Player 2">
+        </div>
+        <div class="carousel-item" data-index="2">
+          <img src="Images/Sports Design/Player-feature/College Athletes/Artboard 3.jpg" alt="College Player 3">
+        </div>
+        <div class="carousel-item" data-index="3">
+          <img src="Images/Sports Design/Player-feature/College Athletes/Artboard 4.jpg" alt="College Player 4">
+        </div>
+      </div>
+      <div class="carousel-nav prev" onclick="moveCarousel('collegeCarousel', -1)">‹</div>
+      <div class="carousel-nav next" onclick="moveCarousel('collegeCarousel', 1)">›</div>
+    </div>
+  </section>
+
+  <!-- College Grid -->
+  <div class="grid-section">
+    <div class="grid-container" id="collegeGrid">
+      <div class="grid-item large" onclick="openLightbox(7)">
+        <img src="Images/Sports Design/Player-feature/College Athletes/Star Design.jpg" alt="College Design 1">
+      </div>
+      <div class="grid-item large" onclick="openLightbox(8)">
+        <img src="Images/Sports Design/Player-feature/College Athletes/Jack Of All Trades.jpg" alt="College Design 2">
+      </div>
+      <div class="grid-item" onclick="openLightbox(9)">
+        <img src="Images/Sports Design/Player-feature/College Athletes/ABU DESIGN.jpg" alt="College Design 3">
+      </div>
+      <div class="grid-item tall" onclick="openLightbox(10)">
+        <img src="Images/Sports Design/Player-feature/College Athletes/Scoring Machine.jpg" alt="College Design 4">
+      </div>
+      <div class="grid-item" onclick="openLightbox(11)">
+        <img src="Images/Sports Design/Player-feature/College Athletes/Rising Star Design.jpg" alt="College Design 5">
+      </div>
+      <div class="grid-item" onclick="openLightbox(12)">
+        <img src="Images/Sports Design/Player-feature/College Athletes/ZION SPOTWOOD DESIGN.jpg" alt="College Design 6">
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <div class="lightbox-close" onclick="closeLightbox()">×</div>
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-nav prev" onclick="navigateLightbox(-1)">‹</div>
+      <div class="lightbox-nav next" onclick="navigateLightbox(1)">›</div>
+    </div>
+  </div>
+
+</body>
+</html>

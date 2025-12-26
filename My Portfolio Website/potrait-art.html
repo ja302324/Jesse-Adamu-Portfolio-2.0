@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/personal-design/Portrait Art/part.css">
+    <script src="Js/part.js" defer></script>
+</head>
+<body>
+
+  <!-- Background Image -->
+  <img src="Images/Purplespace.jpeg" class="wbgimage" alt="">
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+
+  <!-- Decorative Elements -->
+  <div class="deco-circle"></div>
+  <div class="deco-circle"></div>
+
+  <!-- Back Button -->
+  <a href="personal.html" class="back-button">← Back</a>
+
+  <!-- Header Section -->
+  <section class="header-section">
+    <div class="header-content">
+      <div class="logo-container">
+        <div class="rotating-circle"></div>
+        <div class="logo-inner">
+          <img src="Images/Signature.png" alt="Jesse Adamu Logo">
+        </div>
+      </div>
+      <h1 class="header-title">PORTRAIT ART</h1>
+      <p class="header-subtitle">Custom Digital Illustrations</p>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Creative Gallery Layout -->
+    <div class="gallery">
+      
+      <!-- Portrait 1 - Large -->
+      <div class="portrait-item" onclick="openLightbox(0)">
+        <img src="Images/Personal Page/Portrait-art/Poster 1.jpg" alt="Portrait Art 1">
+        <div class="portrait-number">01</div>
+        <div class="portrait-info">
+          <h3 class="portrait-title">Creative Portrait</h3>
+          <p class="portrait-description">Custom portrait design</p>
+        </div>
+      </div>
+
+      <!-- Portrait 2 - Medium -->
+      <div class="portrait-item" onclick="openLightbox(1)">
+        <img src="Images/Personal Page/Portrait-art/Poster 2.jpg" alt="Portrait Art 2">
+        <div class="portrait-number">02</div>
+        <div class="portrait-info">
+          <h3 class="portrait-title">Creative Portrait</h3>
+          <p class="portrait-description">Custom portrait design</p>
+        </div>
+      </div>
+
+        <!-- Portrait 3 - Medium -->
+      <div class="portrait-item" onclick="openLightbox(2)">
+        <img src="Images/Personal Page/Portrait-art/Jessica Graduation.jpeg" alt="Portrait Art 2">
+        <div class="portrait-number">03</div>
+        <div class="portrait-info">
+          <h3 class="portrait-title">College Graduation</h3>
+          <p class="portrait-description">Custom Graduate Illustration</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <div class="lightbox-close" onclick="closeLightbox()">×</div>
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-nav prev" onclick="navigateLightbox(-1)">‹</div>
+      <div class="lightbox-nav next" onclick="navigateLightbox(1)">›</div>
+    </div>
+  </div>
+</body>
+</html>
