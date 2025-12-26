@@ -13,7 +13,7 @@
    =============================== */
 @font-face {
   font-family: 'Supertalls';
-  src: url('fonts/Supertalls.otf') format('opentype');
+  src: url('../fonts/Supertalls.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: 'Belong Faith';
-  src: url('fonts/BelongFaith-Regular.otf') format('opentype');
+  src: url('../fonts/BelongFaith-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
