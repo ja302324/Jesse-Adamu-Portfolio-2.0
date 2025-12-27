@@ -52,7 +52,10 @@ function moveCarousel(carouselId, direction) {
     const items = track.querySelectorAll('.carousel-item');
     if (!items.length) return;
     const itemWidth = items[0].offsetWidth;
-    const maxScroll = Math.max(0, (items.length - 4) * itemWidth);
+    const container = track.parentElement;
+    const containerWidth = container ? container.offsetWidth : itemWidth * 4;
+    const totalWidth = items.length * itemWidth;
+    const maxScroll = Math.max(0, totalWidth - containerWidth);
 
     carouselPositions[carouselId] += direction * itemWidth;
 
