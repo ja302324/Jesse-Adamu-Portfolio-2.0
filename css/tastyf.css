@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: 'Termina Test';
-  src: url('fonts/TerminaTest-Demi.otf') format('opentype');
+  src: url('/fonts/TerminaTest-Demi.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Supertalls';
-  src: url('fonts/Supertalls.otf') format('opentype');
+  src: url('/fonts/Supertalls.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
